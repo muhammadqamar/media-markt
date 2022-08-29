@@ -1,0 +1,102 @@
+.task__smartphone {
+  max-width: 1440px;
+  margin: 0 auto 35.76px;
+  padding: 0 120px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    margin: 56px auto;
+    padding: 0 24px;
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    padding: 0 80px;
+  }
+
+  .smartphone_bg_img {
+    width: 527px;
+    height: 419.89px;
+    position: absolute;
+    top: -21px;
+    right: -80px;
+    display: block;
+
+    @media (max-width: 1299px) {
+      display: none;
+    }
+  }
+
+  .smartphone_bg_img_2 {
+    width: 1037.3px;
+    height: 507.94px;
+    position: absolute;
+    top: 192px;
+    left: -783px;
+  }
+
+  .main_smartphone_section {
+    position: relative;
+    width: 717px;
+
+    @media (max-width: 999px) {
+      width: 100%;
+    }
+
+    .smart_heading {
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 50px;
+      letter-spacing: 0.01em;
+      color: var(--black);
+      font-family: "MM Headline Pro WebTT";
+      margin-bottom: 32px;
+
+      @media (max-width: 768px) {
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.01em;
+        margin-bottom: 24px;
+      }
+    }
+
+    ul {
+      // list-style-image: url("../images/taskPage/play-black.png");
+      // padding-left: 55px;
+      list-style: none;
+      li {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color: var(--black);
+        // padding-left: 24px;]
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -48px;
+          width: 31px;
+          height: 31px;
+          background-image: url("../images/taskPage/play-black.png");
+          background-repeat: no-repeat;
+          background-position: "center";
+          background-size: "cover";
+        }
+
+        @media (max-width: 768px) {
+          font-size: 16px;
+          line-height: 24px;
+          padding-left: 16px;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 24px;
+
+          @media (max-width: 768px) {
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+  }
+}

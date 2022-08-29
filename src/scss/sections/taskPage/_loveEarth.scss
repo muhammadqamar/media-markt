@@ -1,0 +1,157 @@
+.task_love_earth {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px 73.6px;
+  .earth_inner_section {
+    max-width: 1200px;
+    margin: 113px auto 0;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 21px;
+    background: #ffffff;
+    padding: 40px 34px 37.42px 45px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+
+    @media (max-width: 999px) {
+      flex-direction: column-reverse;
+      padding: 24px 24px 32px;
+    }
+
+    .inner_left_section {
+      width: 539px;
+
+      @media (max-width: 999px) {
+        width: 100%;
+      }
+
+      .inner_heading {
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 50px;
+        letter-spacing: 0.01em;
+        color: #fb4b1e;
+
+        @media (max-width: 768px) {
+          font-size: 20px;
+          line-height: 30px;
+          letter-spacing: 0.01em;
+        }
+      }
+      .inner_para {
+        margin: 24px 0 37px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: #404040;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+          line-height: 25px;
+          margin: 16px 0 24px;
+        }
+      }
+    }
+    .inner_right_section {
+      width: 545px;
+      height: auto;
+
+      @media (max-width: 999px) {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+  .earth_logo_section {
+    // width: 974px;
+    height: 801px;
+    position: relative;
+    display: flex;
+
+    @media (max-width: 999px) {
+      width: 100%;
+      padding: 0 24px;
+    }
+
+    .content_section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 230px;
+      left: 386px;
+      z-index: 1;
+      @media (max-width: 1199px) {
+        right: 0;
+      }
+      .logo_content {
+        width: 669px;
+        margin: 0 auto;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 58px;
+        text-align: center;
+        letter-spacing: -0.03em;
+        color: var(--white);
+        margin-bottom: 64px;
+
+        @media (max-width: 999px) {
+          width: 100%;
+          font-size: 20px;
+          line-height: 30px;
+          text-align: center;
+          letter-spacing: 0.01em;
+          margin-bottom: 48px;
+        }
+      }
+    }
+
+    .earthBack_shape_img {
+      width: 974px;
+      height: 801px;
+      position: absolute;
+      top: -65px;
+      left: 281px;
+      .earthBack_img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      @media (max-width: 768px) {
+        top: -250px;
+        right: -545.3px;
+      }
+    }
+  }
+
+  .earth_left_logo {
+    width: 750px;
+    height: 654px;
+    position: absolute;
+    top: 95px;
+    left: 0;
+    z-index: 1;
+    .loveEarth_left_logo {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    @media (min-width: 440px) and (max-width: 768px) {
+      width: 694.22px;
+      height: 587px;
+      left: -370px;
+    }
+    @media (min-width: 768px) and (max-width: 999px) {
+      left: -260px;
+    }
+    @media (max-width: 440px) {
+      width: 656.22px;
+      height: 587px;
+      left: -429px;
+    }
+  }
+}

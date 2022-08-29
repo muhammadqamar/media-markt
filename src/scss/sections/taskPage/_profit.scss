@@ -1,0 +1,115 @@
+.task__profit {
+  max-width: 1440px;
+  margin: 88px auto 88px;
+  padding: 0 120px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    margin: 56px auto;
+    padding: 0 24px;
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    padding: 0 50px;
+  }
+
+  .bg_shape_img {
+    width: 974.02px;
+    height: 801.47px;
+    position: absolute;
+    top: -132px;
+    right: -85px;
+
+    @media (max-width: 768px) {
+      width: 380.33px;
+      height: 238.49px;
+      top: 460px;
+      right: 0;
+    }
+  }
+
+  .profit_section {
+    position: relative;
+    width: 100%;
+    min-height: 504px;
+    padding: 0 40px 0 67px;
+    background: #ffffff;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    gap: 23px;
+
+    @media (max-width: 999px) {
+      flex-direction: column;
+      gap: 0;
+      padding: 24px;
+    }
+
+    .profit_img {
+      width: 549px;
+      height: 504px;
+      display: block;
+
+      @media (max-width: 999px) {
+        display: none;
+      }
+    }
+
+    .profit_mobile_img {
+      display: none;
+
+      @media (max-width: 999px) {
+        display: block;
+        width: 100%;
+        height: 292.26px;
+      }
+    }
+
+    .profit_contant {
+      // margin-left: -70px;
+      @media (max-width: 999px) {
+        margin-left: 0;
+      }
+      .content_heading {
+        font-style: italic;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 58px;
+        letter-spacing: -0.03em;
+        color: var(--red-400);
+        font-family: "MM Headline Pro WebTT";
+        margin-bottom: 24px;
+
+        @media (max-width: 768px) {
+          font-size: 22px;
+          line-height: 30px;
+          letter-spacing: 0.01em;
+          margin-bottom: 16px;
+        }
+      }
+
+      .contant_about {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0.01em;
+        color: var(--off-black);
+        margin-bottom: 64px;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+          line-height: 22px;
+          letter-spacing: 0.02em;
+          margin-bottom: 32px;
+        }
+      }
+
+      .holy_btn {
+        background: var(--red-400);
+        color: var(--white);
+        border: none;
+        border-radius: 3px;
+      }
+    }
+  }
+}

@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>@import "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap";
+@font-face {
+  font-family: MM Text Pro WebTT;
+  src: url("mmtextwebtt-regular.c4987baf.ttf");
+}
+
+@font-face {
+  font-family: MM Headline Pro WebTT;
+  src: url("mmheadlinewebtt-regular.98f6af08.ttf");
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+ul[role="list"], ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizespeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img, picture {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *, :before, :after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+:root, #articlePage {
+  --white: #fff;
+  --black: #141414;
+  --off-black: #3f3937;
+  --off-white: #f7f7f7;
+  --transparent: #0000;
+  --brand: #df6234;
+  --brand-100: #fb4b1e;
+  --green: #00b362;
+  --green-400: #008d72;
+  --red-400: #df0000;
+  --main-background: #f5f5f5;
+  --section-padding: 3rem;
+}
+
+@keyframes splide-loading {
+  0% {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.splide__track--draggable {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.splide__track--fade > .splide__list {
+  display: block;
+}
+
+.splide__track--fade > .splide__list > .splide__slide {
+  opacity: 0;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.splide__track--fade > .splide__list > .splide__slide.is-active {
+  opacity: 1;
+  z-index: 1;
+  position: relative;
+}
+
+.splide--rtl {
+  direction: rtl;
+}
+
+.splide__track--ttb > .splide__list {
+  display: block;
+}
+
+.splide__container {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.splide__list {
+  backface-visibility: hidden;
+  height: 100%;
+  display: flex;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.splide.is-initialized:not(.is-active) .splide__list {
+  display: block;
+}
+
+.splide__pagination {
+  pointer-events: none;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  display: flex;
+}
+
+.splide__pagination li {
+  pointer-events: auto;
+  margin: 0;
+  line-height: 1;
+  list-style-type: none;
+  display: inline-block;
+}
+
+.splide__progress__bar {
+  width: 0;
+}
+
+.splide {
+  visibility: hidden;
+  position: relative;
+}
+
+.splide.is-initialized, .splide.is-rendered {
+  visibility: visible;
+}
+
+.splide__slide {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  margin: 0;
+  position: relative;
+  list-style-type: none !important;
+}
+
+.splide__slide img {
+  vertical-align: bottom;
+}
+
+.splide__spinner {
+  contain: strict;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #999;
+  border-left-color: #0000;
+  border-radius: 50%;
+  margin: auto;
+  animation: splide-loading 1s linear infinite;
+  display: inline-block;
+  position: absolute;
+  inset: 0;
+}
+
+.splide__sr {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.splide__toggle.is-active .splide__toggle__play, .splide__toggle__pause {
+  display: none;
+}
+
+.splide__toggle.is-active .splide__toggle__pause {
+  display: inline;
+}
+
+.splide__track {
+  z-index: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+body {
+  font-family: MM Text Pro WebTT;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+svg, img {
+  vertical-align: middle;
+  display: inline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Comfortaa, sans-serif;
+}
+
+.article__header, .article__footer, .section {
+  width: min(80rem, 100%);
+  padding-inline: 3rem;
+  padding-block: var(--section-padding);
+  margin-inline: auto;
+}
+
+@media screen and (max-width: 1440px) {
+  .article__header, .article__footer, .section {
+    padding-inline: 1.5rem;
+  }
+}
+
+.task__hero {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.task__hero .inner__container {
+  background-color: var(--red-400);
+  height: 900px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin: 30px 30px 0;
+  position: relative;
+}
+
+@media (max-width: 999px) {
+  .task__hero .inner__container {
+    margin: 50px 16px 0;
+  }
+}
+
+.task__hero .headings {
+  max-width: 460px;
+  color: var(--white);
+  float: right;
+  z-index: 999;
+  margin-right: 136px;
+  padding-top: 128px;
+  position: relative;
+}
+
+@media (max-width: 999px) {
+  .task__hero .headings {
+    float: inherit;
+    margin-right: 0;
+    padding: 48px 24px 0;
+  }
+}
+
+@media (min-width: 999px) and (max-width: 1150px) {
+  .task__hero .headings {
+    margin-right: 38px;
+  }
+}
+
+@media (min-width: 1150px) and (max-width: 1430px) {
+  .task__hero .headings {
+    margin-right: 90px;
+  }
+}
+
+.task__hero .headings .trade_save_img {
+  width: auto;
+  height: auto;
+  margin-bottom: 32px;
+}
+
+.task__hero .headings p {
+  letter-spacing: .02em;
+  font-size: 32px;
+  line-height: 41px;
+}
+
+.task__hero .headings p span {
+  font-weight: 300;
+}
+
+@media (max-width: 999px) {
+  .task__hero .headings p {
+    letter-spacing: .02em;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.task__hero .headings button {
+  margin-top: 240px;
+}
+
+@media (max-width: 999px) {
+  .task__hero .headings button {
+    margin-top: 32px;
+  }
+}
+
+.task__hero .mobile_img_box {
+  display: none;
+}
+
+@media (min-width: 480px) and (max-width: 999px) {
+  .task__hero .mobile_img_box {
+    max-width: 720.45px;
+    height: 663.84px;
+    display: block;
+    position: absolute;
+    top: 285px;
+    left: -236px;
+  }
+}
+
+@media (min-width: 408px) and (max-width: 480px) {
+  .task__hero .mobile_img_box {
+    max-width: 720.45px;
+    height: 663.84px;
+    display: block;
+    position: absolute;
+    top: 285px;
+    left: -140px;
+  }
+}
+
+@media (max-width: 408px) {
+  .task__hero .mobile_img_box {
+    max-width: 693.45px;
+    height: 485.84px;
+    display: block;
+    position: absolute;
+    top: 422px;
+    left: -140px;
+  }
+}
+
+.task__hero .mobile_img_box .mobile_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.task__hero .mobile_arrow {
+  display: none;
+}
+
+@media (min-width: 408px) and (max-width: 999px) {
+  .task__hero .mobile_arrow {
+    width: 306.44px;
+    height: 450.41px;
+    display: block;
+    position: absolute;
+    top: 310px;
+    left: 66px;
+  }
+}
+
+@media (max-width: 408px) {
+  .task__hero .mobile_arrow {
+    width: 249px;
+    height: 421.41px;
+    display: block;
+    position: absolute;
+    top: 383px;
+    left: 39px;
+  }
+}
+
+.task__hero .white__doodler {
+  display: block;
+  position: absolute;
+  top: 70px;
+  left: 432px;
+}
+
+@media (max-width: 999px) {
+  .task__hero .white__doodler {
+    display: none;
+  }
+}
+
+@media (min-width: 999px) and (max-width: 1299px) {
+  .task__hero .white__doodler {
+    top: 183px;
+    left: 190px;
+  }
+}
+
+.task__hero .white__bg__shape {
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 214px;
+  left: 0;
+}
+
+@media (max-width: 999px) {
+  .task__hero .white__bg__shape {
+    display: none;
+  }
+}
+
+@media (min-width: 999px) and (max-width: 1299px) {
+  .task__hero .white__bg__shape {
+    top: 356px;
+    left: -234px;
+  }
+}
+
+.task__hero .green__bg__shape {
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 133px;
+  left: 0;
+}
+
+@media (max-width: 999px) {
+  .task__hero .green__bg__shape {
+    display: none;
+  }
+}
+
+@media (min-width: 999px) and (max-width: 1299px) {
+  .task__hero .green__bg__shape {
+    top: 310px;
+    left: -177px;
+  }
+}
+
+.task__hero .orange__bg__shape {
+  z-index: 3;
+  display: block;
+  position: absolute;
+  top: 665px;
+  left: -40px;
+}
+
+@media (max-width: 999px) {
+  .task__hero .orange__bg__shape {
+    display: none;
+  }
+}
+
+@media (min-width: 999px) and (max-width: 1299px) {
+  .task__hero .orange__bg__shape {
+    top: 699px;
+    left: -430px;
+  }
+}
+
+.task__hero .user {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  top: 145px;
+  left: 0;
+}
+
+@media (max-width: 999px) {
+  .task__hero .user {
+    display: none;
+  }
+}
+
+@media (min-width: 999px) and (max-width: 1299px) {
+  .task__hero .user {
+    width: 500px;
+    top: 297px;
+    left: -50px;
+  }
+}
+
+.task__hero .arrow {
+  z-index: 4;
+  display: block;
+  position: absolute;
+  top: 363px;
+  left: 377px;
+}
+
+@media (max-width: 999px) {
+  .task__hero .arrow {
+    display: none;
+  }
+}
+
+@media (min-width: 999px) and (max-width: 1299px) {
+  .task__hero .arrow {
+    width: 602px;
+    top: 470px;
+    left: 88px;
+  }
+}
+
+.task__hero .greencenter__bg__shape {
+  z-index: 2;
+  opacity: .4;
+  display: block;
+  position: absolute;
+  top: 860px;
+  left: 110px;
+}
+
+@media (max-width: 999px) {
+  .task__hero .greencenter__bg__shape {
+    display: none;
+  }
+}
+
+@media (min-width: 999px) and (max-width: 1658px) {
+  .task__hero .greencenter__bg__shape {
+    left: 30px;
+  }
+}
+
+.task__hero .greenright__bg__shape {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  top: 704px;
+  right: -30px;
+}
+
+@media (max-width: 999px) {
+  .task__hero .greenright__bg__shape {
+    display: none;
+  }
+}
+
+.task__hero .holy__white__box__container {
+  z-index: 5;
+  background-color: var(--white);
+  max-width: 1200px;
+  width: 100%;
+  text-align: center;
+  border-radius: 40px;
+  padding: 60px 0;
+  position: absolute;
+  top: 800px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+@media (max-width: 999px) {
+  .task__hero .holy__white__box__container {
+    padding: 40px 24px;
+  }
+}
+
+.task__hero .holy__white__box__container .holy__white_box_heading {
+  text-align: center;
+  letter-spacing: -.03em;
+  color: var(--red-400);
+  max-width: 512px;
+  margin: 0 auto 24px;
+  font-family: MM Headline Pro WebTT;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 58px;
+}
+
+@media (max-width: 999px) {
+  .task__hero .holy__white__box__container .holy__white_box_heading {
+    text-align: center;
+    letter-spacing: .01em;
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+}
+
+.task__hero .holy__white__box__container .holy__white_box_about {
+  max-width: 911px;
+  color: var(--off-black);
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+@media (max-width: 999px) {
+  .task__hero .holy__white__box__container .holy__white_box_about {
+    text-align: center;
+    letter-spacing: .01em;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.task__hero .holy__white__box__container .holy__white__box__bg__shape {
+  z-index: -1;
+  width: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .task__hero .holy__white__box__container .holy__white__box__bg__shape {
+    width: 245px;
+  }
+}
+
+.bg-green {
+  background-color: var(--main-background);
+}
+
+@media (max-width: 1658px) {
+  .bg-green {
+    overflow: hidden;
+  }
+}
+
+.task__benifits {
+  max-width: 1440px;
+  z-index: 11;
+  margin: 0 auto;
+  padding: 341px 120px 0;
+  position: relative;
+}
+
+@media (min-width: 516px) and (max-width: 999px) {
+  .task__benifits {
+    padding: 176px 24px 0;
+  }
+}
+
+@media (max-width: 516px) {
+  .task__benifits {
+    padding: 276px 24px 0;
+  }
+}
+
+.task__benifits .benifits_heading {
+  text-align: center;
+  letter-spacing: -.03em;
+  max-width: 618px;
+  color: var(--black);
+  margin: 0 auto 32px;
+  font-family: MM Headline Pro WebTT;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 48px;
+}
+
+@media (max-width: 768px) {
+  .task__benifits .benifits_heading {
+    text-align: center;
+    letter-spacing: .01em;
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.task__benifits .flex__cont {
+  color: var(--black);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .task__benifits .flex__cont {
+    gap: 25px;
+  }
+}
+
+.task__benifits .flex__cont .box {
+  width: 328px;
+}
+
+@media (max-width: 768px) {
+  .task__benifits .flex__cont .box {
+    width: 100%;
+  }
+}
+
+.task__benifits .flex__cont .box .number {
+  margin-bottom: 8px;
+  font-family: Open Sans;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 88px;
+}
+
+@media (max-width: 768px) {
+  .task__benifits .flex__cont .box .number {
+    font-size: 64px;
+    line-height: 72px;
+  }
+}
+
+.task__benifits .flex__cont .box .box_title {
+  margin-bottom: 16px;
+  font-family: MM Headline Pro WebTT;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 32px;
+}
+
+@media (max-width: 768px) {
+  .task__benifits .flex__cont .box .box_title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.task__benifits .flex__cont .box .box_about {
+  letter-spacing: .01em;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+@media (max-width: 768px) {
+  .task__benifits .flex__cont .box .box_about {
+    letter-spacing: .01em;
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+.task__benifits button {
+  background-color: var(--red-400);
+  color: var(--white);
+  z-index: 11;
+  border: none;
+  border-radius: 3px;
+  margin: 64px auto 0;
+  display: block;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .task__benifits button {
+    margin: 45px auto 0;
+  }
+}
+
+.task__profit {
+  max-width: 1440px;
+  margin: 88px auto;
+  padding: 0 120px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .task__profit {
+    margin: 56px auto;
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .task__profit {
+    padding: 0 50px;
+  }
+}
+
+.task__profit .bg_shape_img {
+  width: 974.02px;
+  height: 801.47px;
+  position: absolute;
+  top: -132px;
+  right: -85px;
+}
+
+@media (max-width: 768px) {
+  .task__profit .bg_shape_img {
+    width: 380.33px;
+    height: 238.49px;
+    top: 460px;
+    right: 0;
+  }
+}
+
+.task__profit .profit_section {
+  width: 100%;
+  min-height: 504px;
+  background: #fff;
+  border-radius: 40px;
+  align-items: center;
+  gap: 23px;
+  padding: 0 40px 0 67px;
+  display: flex;
+  position: relative;
+  box-shadow: 0 6px 12px #0000001a;
+}
+
+@media (max-width: 999px) {
+  .task__profit .profit_section {
+    flex-direction: column;
+    gap: 0;
+    padding: 24px;
+  }
+}
+
+.task__profit .profit_section .profit_img {
+  width: 549px;
+  height: 504px;
+  display: block;
+}
+
+@media (max-width: 999px) {
+  .task__profit .profit_section .profit_img {
+    display: none;
+  }
+}
+
+.task__profit .profit_section .profit_mobile_img {
+  display: none;
+}
+
+@media (max-width: 999px) {
+  .task__profit .profit_section .profit_mobile_img {
+    width: 100%;
+    height: 292.26px;
+    display: block;
+  }
+}
+
+@media (max-width: 999px) {
+  .task__profit .profit_section .profit_contant {
+    margin-left: 0;
+  }
+}
+
+.task__profit .profit_section .profit_contant .content_heading {
+  letter-spacing: -.03em;
+  color: var(--red-400);
+  margin-bottom: 24px;
+  font-family: MM Headline Pro WebTT;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 58px;
+}
+
+@media (max-width: 768px) {
+  .task__profit .profit_section .profit_contant .content_heading {
+    letter-spacing: .01em;
+    margin-bottom: 16px;
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+.task__profit .profit_section .profit_contant .contant_about {
+  letter-spacing: .01em;
+  color: var(--off-black);
+  margin-bottom: 64px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+@media (max-width: 768px) {
+  .task__profit .profit_section .profit_contant .contant_about {
+    letter-spacing: .02em;
+    margin-bottom: 32px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+.task__profit .profit_section .profit_contant .holy_btn {
+  background: var(--red-400);
+  color: var(--white);
+  border: none;
+  border-radius: 3px;
+}
+
+.task__smartphone {
+  max-width: 1440px;
+  margin: 0 auto 35.76px;
+  padding: 0 120px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .task__smartphone {
+    margin: 56px auto;
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .task__smartphone {
+    padding: 0 80px;
+  }
+}
+
+.task__smartphone .smartphone_bg_img {
+  width: 527px;
+  height: 419.89px;
+  display: block;
+  position: absolute;
+  top: -21px;
+  right: -80px;
+}
+
+@media (max-width: 1299px) {
+  .task__smartphone .smartphone_bg_img {
+    display: none;
+  }
+}
+
+.task__smartphone .smartphone_bg_img_2 {
+  width: 1037.3px;
+  height: 507.94px;
+  position: absolute;
+  top: 192px;
+  left: -783px;
+}
+
+.task__smartphone .main_smartphone_section {
+  width: 717px;
+  position: relative;
+}
+
+@media (max-width: 999px) {
+  .task__smartphone .main_smartphone_section {
+    width: 100%;
+  }
+}
+
+.task__smartphone .main_smartphone_section .smart_heading {
+  letter-spacing: .01em;
+  color: var(--black);
+  margin-bottom: 32px;
+  font-family: MM Headline Pro WebTT;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 50px;
+}
+
+@media (max-width: 768px) {
+  .task__smartphone .main_smartphone_section .smart_heading {
+    letter-spacing: .01em;
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.task__smartphone .main_smartphone_section ul {
+  list-style: none;
+}
+
+.task__smartphone .main_smartphone_section ul li {
+  color: var(--black);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  position: relative;
+}
+
+.task__smartphone .main_smartphone_section ul li:before {
+  content: "";
+  width: 31px;
+  height: 31px;
+  background-image: url("play-black.a126d451.png");
+  background-repeat: no-repeat;
+  background-position: "center";
+  background-size: "cover";
+  position: absolute;
+  top: 0;
+  left: -48px;
+}
+
+@media (max-width: 768px) {
+  .task__smartphone .main_smartphone_section ul li {
+    padding-left: 16px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.task__smartphone .main_smartphone_section ul li:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .task__smartphone .main_smartphone_section ul li:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.task_faq_main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 120px 107px;
+}
+
+@media (max-width: 999px) {
+  .task_faq_main {
+    padding: 0;
+  }
+}
+
+@media (min-width: 999px) and (max-width: 1199px) {
+  .task_faq_main {
+    padding: 0 80px;
+  }
+}
+
+.section--qna {
+  background: var(--white);
+  border-radius: 40px;
+  padding: 40px;
+}
+
+@media (max-width: 1199px) {
+  .section--qna {
+    border-radius: 20px 20px 0 0;
+    padding: 32px 24px;
+  }
+}
+
+.section--qna .section__title {
+  letter-spacing: .01em;
+  color: var(--brand-100);
+  margin-bottom: 24px;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 50px;
+}
+
+.section--qna .qna + .qna {
+  margin-top: 24px;
+}
+
+.section--qna .qna__header {
+  cursor: pointer;
+  background-color: var(--off-white);
+  border-radius: .5rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+  padding: .875rem 1.25rem;
+  transition: background-color .2s;
+  display: flex;
+}
+
+.section--qna .qna__header:hover {
+  background-color: #0000;
+}
+
+.section--qna .qna__header::-webkit-details-marker {
+  display: none;
+}
+
+.section--qna .qna__title {
+  font-family: Open sans;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.section--qna .qna__title-icon {
+  width: 1.25rem;
+  height: auto;
+  flex: 0 0 1.25rem;
+}
+
+.section--qna .qna__content {
+  padding: 1.5rem;
+  font-size: .875rem;
+  line-height: 1.75;
+}
+
+.section--qna .qna__content p + p {
+  margin-top: 1em;
+}
+
+.section--qna .qna__content ul {
+  padding-left: 1.25em;
+}
+
+.section--qna .qna__content li + li {
+  margin-top: .5em;
+}
+
+.section--qna .qna__content a {
+  font-weight: 700;
+}
+
+.section--qna .qna__content a:hover {
+  text-decoration: underline 2px var(--brand);
+}
+
+.section--qna .qna[open] .qna__title-icon {
+  transform: scaleY(-1);
+}
+
+.task_love_earth {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 24px 73.6px;
+}
+
+.task_love_earth .earth_inner_section {
+  max-width: 1200px;
+  z-index: 1;
+  background: #fff;
+  border-radius: 40px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 21px;
+  margin: 113px auto 0;
+  padding: 40px 34px 37.42px 45px;
+  display: flex;
+  position: relative;
+  box-shadow: 0 6px 12px #0000001a;
+}
+
+@media (max-width: 999px) {
+  .task_love_earth .earth_inner_section {
+    flex-direction: column-reverse;
+    padding: 24px 24px 32px;
+  }
+}
+
+.task_love_earth .earth_inner_section .inner_left_section {
+  width: 539px;
+}
+
+@media (max-width: 999px) {
+  .task_love_earth .earth_inner_section .inner_left_section {
+    width: 100%;
+  }
+}
+
+.task_love_earth .earth_inner_section .inner_left_section .inner_heading {
+  letter-spacing: .01em;
+  color: #fb4b1e;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 50px;
+}
+
+@media (max-width: 768px) {
+  .task_love_earth .earth_inner_section .inner_left_section .inner_heading {
+    letter-spacing: .01em;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.task_love_earth .earth_inner_section .inner_left_section .inner_para {
+  color: #404040;
+  margin: 24px 0 37px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+@media (max-width: 768px) {
+  .task_love_earth .earth_inner_section .inner_left_section .inner_para {
+    margin: 16px 0 24px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+
+.task_love_earth .earth_inner_section .inner_right_section {
+  width: 545px;
+  height: auto;
+}
+
+@media (max-width: 999px) {
+  .task_love_earth .earth_inner_section .inner_right_section {
+    width: auto;
+    height: auto;
+  }
+}
+
+.task_love_earth .earth_logo_section {
+  height: 801px;
+  display: flex;
+  position: relative;
+}
+
+@media (max-width: 999px) {
+  .task_love_earth .earth_logo_section {
+    width: 100%;
+    padding: 0 24px;
+  }
+}
+
+.task_love_earth .earth_logo_section .content_section {
+  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: 230px;
+  left: 386px;
+}
+
+@media (max-width: 1199px) {
+  .task_love_earth .earth_logo_section .content_section {
+    right: 0;
+  }
+}
+
+.task_love_earth .earth_logo_section .content_section .logo_content {
+  width: 669px;
+  text-align: center;
+  letter-spacing: -.03em;
+  color: var(--white);
+  margin: 0 auto 64px;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58px;
+}
+
+@media (max-width: 999px) {
+  .task_love_earth .earth_logo_section .content_section .logo_content {
+    width: 100%;
+    text-align: center;
+    letter-spacing: .01em;
+    margin-bottom: 48px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.task_love_earth .earth_logo_section .earthBack_shape_img {
+  width: 974px;
+  height: 801px;
+  position: absolute;
+  top: -65px;
+  left: 281px;
+}
+
+.task_love_earth .earth_logo_section .earthBack_shape_img .earthBack_img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .task_love_earth .earth_logo_section .earthBack_shape_img {
+    top: -250px;
+    right: -545.3px;
+  }
+}
+
+.task_love_earth .earth_left_logo {
+  width: 750px;
+  height: 654px;
+  z-index: 1;
+  position: absolute;
+  top: 95px;
+  left: 0;
+}
+
+.task_love_earth .earth_left_logo .loveEarth_left_logo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (min-width: 440px) and (max-width: 768px) {
+  .task_love_earth .earth_left_logo {
+    width: 694.22px;
+    height: 587px;
+    left: -370px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+  .task_love_earth .earth_left_logo {
+    left: -260px;
+  }
+}
+
+@media (max-width: 440px) {
+  .task_love_earth .earth_left_logo {
+    width: 656.22px;
+    height: 587px;
+    left: -429px;
+  }
+}
+
+.article__header {
+  padding-block: 0;
+}
+
+.article__title {
+  border-left: 3px solid var(--brand);
+  padding-inline: .5rem;
+}
+
+.article__meta {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  display: flex;
+}
+
+.article__meta p {
+  border-left: 2px solid var(--brand);
+  padding-inline: 1rem;
+}
+
+.article__footer {
+  border-top: 1px solid var(--black);
+  padding-block: 3rem;
+}
+
+.article__footer p {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .article__footer p {
+    justify-content: center;
+  }
+}
+
+.article__footer p img {
+  height: 5rem;
+  width: auto;
+}
+
+.article__footer .espa {
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  display: flex;
+}
+
+@media screen and (max-width: 768px) {
+  .article__footer .espa {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.article__footer .espa p {
+  text-align: center;
+  font-size: .875rem;
+}
+
+.article__footer .espa img {
+  height: 5rem;
+  width: auto;
+}
+
+.btn {
+  cursor: pointer;
+  min-height: 60px;
+  border: 1px solid var(--black);
+  text-align: left;
+  color: var(--red-400);
+  background-color: var(--white);
+  border-radius: 0;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 24px;
+  font-family: MM Headline Pro WebTT;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 800;
+  transition: background-color .2s, color .2s;
+  display: inline-flex;
+}
+
+.btn img {
+  width: 9px;
+  transition: transform .2s;
+}
+
+.btn--black {
+  background-color: var(--off-black);
+  color: var(--white);
+}
+
+.btn--black:hover {
+  color: var(--black);
+  border-color: var(--black);
+  background-color: #0000;
+}
+
+.btn--black:hover img {
+  transform: translateX(20%);
+}
+
+.btn--outline {
+  color: var(--black);
+  border-color: var(--black);
+  background-color: #0000;
+}
+
+.btn--outline:hover {
+  background-color: var(--off-black);
+  color: var(--white);
+}
+
+.btn--outline:hover img {
+  transform: translateX(10%);
+}
+
+
+
+</style>
+  </head>
+  <body>
+    <section class="task__hero">
+  <div class="inner__container">
+    <div class="headings">
+      <img src="/hero-heading%20-img.c06695aa.png" alt="trade&save" class="trade_save_img">
+      <!-- <h1>trade<span>&save</span></h1> -->
+      <p>Επιστροφή παλιάς συσκευής για νέες αγορές με κέρδος έως και <strong> 1.000€!</strong>!</p>
+      <a href=""><button class="btn">
+          Αξιολόγησε τη συσκευή σου
+
+          <img src="/btn-right-arrow.aaa782ac.svg" alt="play"></button></a>
+    </div>
+    <div class="mobile_img_box">
+      <img src="/mobile.a47b443c.png" class="mobile_img" alt="bg">
+    </div>
+    <!-- <img src="./4/taskPage/doodles.svg" alt="bg-shape" class="white__doodler" /> -->
+    <img src="/hero-white-bg-s.00c3617c.png" alt="bg-shape" class="white__bg__shape">
+    <img src="/user-hero-img.d563efcc.png" alt="bg-shape" class="user">
+    <img src="/hero-black-border-s.89de9bf5.png" alt="bg-shape" class="green__bg__shape">
+    <img src="/hero-arrow.ac0609cc.png" alt="bg-shape" class="arrow">
+    <img src="/hero-mobil-arrow.260c1063.svg" alt="bg-shape" class="mobile_arrow">
+    <img src="/orange-bg-s.3036a708.png" alt="bg-shape" class="orange__bg__shape">
+    <!-- <img src="./images/taskPage/centergreen.png" alt="bg-shape" class="greencenter__bg__shape" /> -->
+    <!-- <img src="./images/taskPage/rightgreen.png" alt="bg-shape" class="greenright__bg__shape" /> -->
+    <div class="holy__white__box__container">
+      <h2 class="holy__white_box_heading">H τεχνολογία εξελίσσεται και την ακολουθούμε!</h2>
+      <p class="holy__white_box_about">
+        Με το πρόγραμμα επιστροφής Trade & Save επιστρέφεις το παλιό σου smartphone και παίρνεις την
+        αξία του σε εκπτωτικό κουπόνι που μπορείς να εξαργυρώσεις ανά πάσα στιγμή, κάνοντας
+        φθηνότερες αγορές και εξασφαλίζοντας έκπτωση
+        <strong> έως και 1.000€!</strong>
+      </p>
+      <img src="/horo-bg-box-right-arrow.e6827c83.png" alt="bg-shape" class="holy__white__box__bg__shape">
+    </div>
+  </div>
+</section>
+
+    <div class="bg-green">
+      <section class="task__benifits">
+  <h3 class="benifits_heading">Επωφελήσου από την παλιά σου συσκευή με 3 απλά βήματα!</h3>
+  <div class="flex__cont">
+    <div class="box">
+      <div class="number">01.</div>
+      <p class="box_title">Έλα σε ένα κατάστημα</p>
+      <p class="box_about">
+        Έλα με το παλιό σου smartphone σε ένα φυσικό κατάστημα Public ή Media Markt.
+      </p>
+    </div>
+    <div class="box">
+      <div class="number">02.</div>
+      <p class="box_title">Πάρε προσφορά</p>
+      <p class="box_about">
+        Ενημερώσου από την ομάδα των Public Experts για την αξία της συσκευής σου βάσει της
+        κατάστασής της.
+      </p>
+    </div>
+    <div class="box">
+      <div class="number">03.</div>
+      <p class="box_title">Παράλαβε το voucher</p>
+      <p class="box_about">
+        Πάρε το κουπόνι σου και εξαργύρωσέ το αγοράζοντας ό,τι θες με έκπτωση αντίστοιχη της αξίας
+        της παλιάς σου συσκευής!
+      </p>
+    </div>
+  </div>
+  <a href=""><button class="btn">
+      Μάθε την αξία της συσκευής σου
+
+      <img src="/btn-right-arrow-white.6249563a.png" alt="play"></button></a>
+</section>
+
+
+      <section class="task__profit">
+  <img src="/profit-bg-img.46e2eda2.svg" alt="bg-shape" class="bg_shape_img">
+
+  <div class="profit_section">
+    <img src="/profit-card-imge.050d64ee.png" alt="profit" class="profit_img">
+
+    <img src="/profit-mobile-img.2cf9f835.svg" alt="profit" class="profit_mobile_img">
+    <div class="profit_contant">
+      <h1 class="content_heading">
+        Κάθε επιστροφή, <br>
+        είναι κέρδος!
+      </h1>
+      <p class="contant_about">
+        Φέρε το παλιό σου smartphone για απόσυρση σε ένα κατάστημα Public και απόλαυσε τον πιο
+        <strong> εύκολο, γρήγορο και οικολογικό </strong>τρόπο να εξασφαλίσεις κέρδος για την
+        επόμενη αγορά σου!
+      </p>
+      <a href=""><button class="btn holy_btn">
+          Αξιολόγησε τη συσκευή σου
+
+          <img src="/btn-right-arrow-white.6249563a.png" alt="play"></button></a>
+    </div>
+  </div>
+</section>
+
+      <section class="task__smartphone">
+  <img src="/smartphone-black-arrow-img.51ce1673.png" alt="smartphone" class="smartphone_bg_img">
+  <!-- <img src="./images/taskPage/centergreen.png" alt="smartphone" class="smartphone_bg_img_2" /> -->
+  <div class="main_smartphone_section">
+    <h1 class="smart_heading">Πριν επιστρέψεις το smartphone σου...</h1>
+    <ul>
+      <li>Βεβαιώσου ότι είναι <strong> σε λειτουργία και έχει πάνω απο 5% μπαταρία.</strong></li>
+      <li>Αφαίρεσε όλα τα αξεσουάρ, <strong> όπως το προστατευτικό οθόνης και τη θήκη.</strong></li>
+      <li>
+        Κάνε <strong> back-up τα αρχεία </strong> σου (μην ανησυχείς, μπορούμε να βοηθήσουμε!).
+      </li>
+      <li>
+        <strong> Κάνε επαναφορά εργοστασιακών ρυθμίσεων </strong> για να διαγραφούν όλες οι
+        ρυθμίσεις και τα προσωπικά σου δεδομένα.
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+      <div class="task_love_earth">
+  <!-- <div class="earth_inner_section">
+    <div class="inner_left_section">
+      <h2 class="inner_heading">Κάθε μας πράξη, <br />έχει σημασία!</h2>
+      <p class="inner_para">
+        Με το πρόγραμμα «Love Earth💚» φροντίζουμε για έναν πιο βιώσιμο πλανήτη, υποστηρίζοντας
+        πρωτοβουλίες που προωθούν τις αρχές της κυκλικής οικονομίας και προσφέροντας υπηρεσίες που
+        δίνουν βήμα για ένα zero-waste αύριο.
+      </p>
+
+      <img src="./images/taskPage/earthLeft.svg" alt="earthLeft" />
+    </div>
+    <div class="inner_right_section">
+      <img src="./images/taskPage/loveEarthRight.svg" alt="loveEarthRight" />
+    </div>
+  </div> -->
+  <div class="earth_logo_section">
+    <div class="earth_left_logo">
+      <img class="loveEarth_left_logo" src="/love-earth-arrow-black.c9ce0f6a.png" alt="earth arrow">
+    </div>
+    <div class="content_section">
+      <p class="logo_content">
+        Επίστρεψε το παλιό σου smartphone και εξασφάλισε για την επόμενη αγορά σου πραγματικό
+        όφελος!
+      </p>
+
+      <a href=""><button class="btn">
+          Μάθε την αξία της συσκευής σου
+
+          <img src="/btn-right-arrow.aaa782ac.svg" alt="play"></button></a>
+    </div>
+    <div class="earthBack_shape_img">
+      <img class="earthBack_img" src="/love-earth-s-back-img.a07382a7.png" alt="earth Back">
+    </div>
+  </div>
+</div>
+
+      <div class="task_faq_main">
+  <section class="section section--qna">
+    <h2 class="section__title">Συχνές Ερωτήσεις</h2>
+    <div class="section__content">
+      <details class="qna">
+        <summary class="qna__header">
+          <h3 class="qna__title">
+            &plus; Τι είναι το πρόγραμμα επιδότησης «Ανακυκλώνω – Αλλάζω συσκευή»;
+          </h3>
+          <img class="qna__title-icon" src="/arrow-down.c0beb1cd.svg" alt="" role="presentation">
+        </summary>
+        <div class="qna__content">
+          Το πρόγραμμα <strong>«Ανακυκλώνω-Αλλάζω συσκευή»</strong> είναι πρόγραμμα του Υπουργείου
+          Περιβάλλοντος &amp; Ενέργειας, που επιχορηγεί <strong>νοικοκυριά</strong> για την
+          αντικατάσταση παλαιών <strong>κλιματιστικών, ψυγείων και καταψυκτών</strong>, δίνοντας
+          <strong>έως και 50% επιδότηση για την αγορά καινούργιων</strong>
+          ενεργειακά πιο αποδοτικών συσκευών. Οι δικαιούχοι έχουν τη δυνατότητα να αντικαταστήσουν
+          <strong>έως και 3 συσκευές</strong>. Η επιχορήγηση παρέχεται μέσω επιταγών (vouchers).
+        </div>
+      </details>
+      <details class="qna">
+        <summary class="qna__header">
+          <h3 class="qna__title">&plus; Ποια είναι τα οφέλη του προγράμματος;</h3>
+          <img class="qna__title-icon" src="/arrow-down.c0beb1cd.svg" alt="" role="presentation">
+        </summary>
+        <div class="qna__content">
+          <p>
+            Συμμετέχοντας στο πρόγραμμα μπορείς να αντικαταστήσεις
+            <strong>έως και 3 παλιές και ενεργοβόρες συσκευές</strong> σου και να αποχτήσεις νέες,
+            φιλικές προς το περιβάλλον συσκευές, με <strong>επιδότηση από 30% έως 50%</strong>. Έτσι
+            θα εξοικονομείς ενέργεια και θα έχεις μείωση στην κατανάλωση ρεύματος και άρα
+            εξοικονόμηση χρημάτων!
+          </p>
+        </div>
+      </details>
+      <details class="qna">
+        <summary class="qna__header">
+          <h3 class="qna__title">&plus; Ποια είναι τα οφέλη του προγράμματος;</h3>
+          <img class="qna__title-icon" src="/arrow-down.c0beb1cd.svg" alt="" role="presentation">
+        </summary>
+        <div class="qna__content">
+          <p>
+            Συμμετέχοντας στο πρόγραμμα μπορείς να αντικαταστήσεις
+            <strong>έως και 3 παλιές και ενεργοβόρες συσκευές</strong> σου και να αποχτήσεις νέες,
+            φιλικές προς το περιβάλλον συσκευές, με <strong>επιδότηση από 30% έως 50%</strong>. Έτσι
+            θα εξοικονομείς ενέργεια και θα έχεις μείωση στην κατανάλωση ρεύματος και άρα
+            εξοικονόμηση χρημάτων!
+          </p>
+        </div>
+      </details>
+      <details class="qna">
+        <summary class="qna__header">
+          <h3 class="qna__title">&plus; Ποια είναι τα οφέλη του προγράμματος;</h3>
+          <img class="qna__title-icon" src="/arrow-down.c0beb1cd.svg" alt="" role="presentation">
+        </summary>
+        <div class="qna__content">
+          <p>
+            Συμμετέχοντας στο πρόγραμμα μπορείς να αντικαταστήσεις
+            <strong>έως και 3 παλιές και ενεργοβόρες συσκευές</strong> σου και να αποχτήσεις νέες,
+            φιλικές προς το περιβάλλον συσκευές, με <strong>επιδότηση από 30% έως 50%</strong>. Έτσι
+            θα εξοικονομείς ενέργεια και θα έχεις μείωση στην κατανάλωση ρεύματος και άρα
+            εξοικονόμηση χρημάτων!
+          </p>
+        </div>
+      </details>
+      <details class="qna">
+        <summary class="qna__header">
+          <h3 class="qna__title">&plus; Ποια είναι τα οφέλη του προγράμματος;</h3>
+          <img class="qna__title-icon" src="/arrow-down.c0beb1cd.svg" alt="" role="presentation">
+        </summary>
+        <div class="qna__content">
+          <p>
+            Συμμετέχοντας στο πρόγραμμα μπορείς να αντικαταστήσεις
+            <strong>έως και 3 παλιές και ενεργοβόρες συσκευές</strong> σου και να αποχτήσεις νέες,
+            φιλικές προς το περιβάλλον συσκευές, με <strong>επιδότηση από 30% έως 50%</strong>. Έτσι
+            θα εξοικονομείς ενέργεια και θα έχεις μείωση στην κατανάλωση ρεύματος και άρα
+            εξοικονόμηση χρημάτων!
+          </p>
+        </div>
+      </details>
+    </div>
+  </section>
+</div>
+
+    </div>
+    <footer class="article__footer">
+  <p>
+    <img src="/footer-ymeepaa-logo.45f12b6d.svg" alt="Επιχειρησιακό πρόγραμμα. Υποδομές Μεταφορών Περιβάλλον και Αειφόρος Ανάπτυξη">
+    <img src="/hero-img-1.76dfaf0c.svg" alt="Υπουργείο περιβάλλοντος και ενέργειας">
+    <img src="/hero-img-2.2c5106be.svg" alt="Ανακλώνω Αλλάζω Συσκευή">
+  </p>
+  <div class="espa">
+    <img src="/footer-ESPA-logo.08767719.png" alt="Ευρωπαική Ένωση. Ευρωπαϊκό Ταμείο Περιφερειακής Ανάπτυξης">
+    <p>
+      Με τη συγχρηματοδότηση της Ελλάδας και της Ευρωπαϊκής Ένωσης<br>
+      Το Πρόγραμμα χρηματοδοτείται από το ΕΣΠΑ – Επιχειρησιακό Πρόγραμμα
+      «Υποδομές Μεταφορών, Περιβάλλον και Αειφόρος Ανάπτυξη
+    </p>
+    <img src="/footer-content-logo.6f0df793.svg" alt="ΕΣΠΑ 2014-2020">
+  </div>
+</footer>
+
+  <script src="/media-markit.59712999.js"></script></body>
+</html>

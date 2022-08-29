@@ -1,0 +1,52 @@
+.btn {
+  cursor: pointer;
+  min-height: 60px;
+  font-size: 20px;
+  font-style: italic;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-family: "MM Headline Pro WebTT";
+  font-weight: 800;
+  border: 1px solid var(--black);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  text-align: left;
+  border-radius: 0;
+  padding: 13px 24px;
+  color: var(--red-400);
+  background-color: var(--white);
+  img {
+    width: 9px;
+    transition: transform 0.2s ease;
+  }
+
+  &--black {
+    background-color: var(--off-black);
+    color: var(--white);
+
+    &:hover {
+      color: var(--black);
+      background-color: transparent;
+      border-color: var(--black);
+
+      img {
+        transform: translateX(20%);
+      }
+    }
+  }
+
+  &--outline {
+    color: var(--black);
+    background-color: transparent;
+    border-color: var(--black);
+
+    &:hover {
+      background-color: var(--off-black);
+      color: var(--white);
+
+      img {
+        transform: translateX(10%);
+      }
+    }
+  }
+}

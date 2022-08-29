@@ -1,0 +1,113 @@
+.bg-green {
+  background-color: var(--main-background);
+
+  @media (max-width: 1658px) {
+    overflow: hidden;
+  }
+}
+.task__benifits {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 341px 120px 0;
+  position: relative;
+  z-index: 11;
+  @media (min-width: 516px) and (max-width: 999px) {
+    padding: 176px 24px 0;
+  }
+  @media (max-width: 516px) {
+    padding: 276px 24px 0;
+  }
+
+  .benifits_heading {
+    font-style: italic;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: -0.03em;
+    max-width: 618px;
+    margin: 0 auto;
+    color: var(--black);
+    font-family: "MM Headline Pro WebTT";
+    margin-bottom: 32px;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      line-height: 30px;
+      text-align: center;
+      letter-spacing: 0.01em;
+      margin-bottom: 24px;
+    }
+  }
+
+  .flex__cont {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    color: var(--black);
+
+    @media (max-width: 768px) {
+      gap: 25px;
+    }
+
+    .box {
+      width: 328px;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      .number {
+        font-family: "Open Sans";
+        font-weight: 700;
+        font-size: 80px;
+        line-height: 88px;
+        margin-bottom: 8px;
+
+        @media (max-width: 768px) {
+          font-size: 64px;
+          line-height: 72px;
+        }
+      }
+      .box_title {
+        font-style: italic;
+        font-weight: 800;
+        font-size: 32px;
+        line-height: 32px;
+        margin-bottom: 16px;
+        font-family: "MM Headline Pro WebTT";
+        @media (max-width: 768px) {
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+      .box_about {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0.01em;
+        @media (max-width: 768px) {
+          font-size: 16px;
+          line-height: 25px;
+          letter-spacing: 0.01em;
+        }
+      }
+    }
+  }
+
+  button {
+    margin: 64px auto 0px;
+    background-color: var(--red-400);
+    display: block;
+    color: var(--white);
+    position: relative;
+    z-index: 11;
+    border: none;
+    border-radius: 3px;
+    @media (max-width: 768px) {
+      margin: 45px auto 0px;
+    }
+  }
+}
