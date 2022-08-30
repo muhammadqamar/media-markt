@@ -272,6 +272,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (min-width: 768px) and (max-width: 999px) {
+  .task__hero .inner__container {
+    height: 1148px;
+  }
+}
+
 .task__hero .headings {
   max-width: 460px;
   color: var(--white);
@@ -336,85 +342,29 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.task__hero .mobile_img_box {
-  display: none;
-}
-
-@media (min-width: 480px) and (max-width: 999px) {
-  .task__hero .mobile_img_box {
-    max-width: 720.45px;
-    height: 663.84px;
-    display: block;
-    position: absolute;
-    top: 285px;
-    left: -236px;
-  }
-}
-
-@media (min-width: 408px) and (max-width: 480px) {
-  .task__hero .mobile_img_box {
-    max-width: 720.45px;
-    height: 663.84px;
-    display: block;
-    position: absolute;
-    top: 285px;
-    left: -140px;
-  }
-}
-
-@media (max-width: 408px) {
-  .task__hero .mobile_img_box {
-    max-width: 693.45px;
-    height: 485.84px;
-    display: block;
-    position: absolute;
-    top: 422px;
-    left: -140px;
-  }
-}
-
-.task__hero .mobile_img_box .mobile_img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.task__hero .mobile_arrow {
-  display: none;
-}
-
-@media (min-width: 408px) and (max-width: 999px) {
-  .task__hero .mobile_arrow {
-    width: 306.44px;
-    height: 450.41px;
-    display: block;
-    position: absolute;
-    top: 310px;
-    left: 66px;
-  }
-}
-
-@media (max-width: 408px) {
-  .task__hero .mobile_arrow {
-    width: 249px;
-    height: 421.41px;
-    display: block;
-    position: absolute;
-    top: 383px;
-    left: 39px;
+@media (min-width: 999px) and (max-width: 1050px) {
+  .task__hero .headings button {
+    margin-left: 65px;
   }
 }
 
 .task__hero .white__doodler {
   display: block;
   position: absolute;
-  top: 70px;
-  left: 432px;
+  top: 65px;
+  left: 395px;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 768px) {
   .task__hero .white__doodler {
     display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+  .task__hero .white__doodler {
+    top: 327px;
+    left: 274px;
   }
 }
 
@@ -433,9 +383,17 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 768px) {
   .task__hero .white__bg__shape {
-    display: none;
+    top: 507px;
+    left: -100px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+  .task__hero .white__bg__shape {
+    top: 470px;
+    left: -138px;
   }
 }
 
@@ -454,9 +412,17 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 768px) {
   .task__hero .green__bg__shape {
-    display: none;
+    top: 400px;
+    left: -125px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+  .task__hero .green__bg__shape {
+    top: 367px;
+    left: -126px;
   }
 }
 
@@ -471,13 +437,21 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 3;
   display: block;
   position: absolute;
-  top: 665px;
-  left: -40px;
+  top: 662px;
+  left: -419px;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 768px) {
   .task__hero .orange__bg__shape {
-    display: none;
+    top: 842px;
+    left: -487px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+  .task__hero .orange__bg__shape {
+    top: 889px;
+    left: -505px;
   }
 }
 
@@ -490,15 +464,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .task__hero .user {
   z-index: 2;
-  display: block;
   position: absolute;
   top: 145px;
   left: 0;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 768px) {
   .task__hero .user {
-    display: none;
+    top: 444px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+  .task__hero .user {
+    top: 407px;
+    left: -121px;
   }
 }
 
@@ -527,8 +507,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 999px) and (max-width: 1299px) {
   .task__hero .arrow {
     width: 602px;
-    top: 470px;
-    left: 88px;
+    top: 367px;
+    left: 196px;
   }
 }
 
@@ -539,12 +519,6 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 860px;
   left: 110px;
-}
-
-@media (max-width: 999px) {
-  .task__hero .greencenter__bg__shape {
-    display: none;
-  }
 }
 
 @media (min-width: 999px) and (max-width: 1658px) {
@@ -561,12 +535,6 @@ h1, h2, h3, h4, h5, h6 {
   right: -30px;
 }
 
-@media (max-width: 999px) {
-  .task__hero .greenright__bg__shape {
-    display: none;
-  }
-}
-
 .task__hero .holy__white__box__container {
   z-index: 5;
   background-color: var(--white);
@@ -579,6 +547,12 @@ h1, h2, h3, h4, h5, h6 {
   top: 800px;
   left: 50%;
   transform: translate(-50%);
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+  .task__hero .holy__white__box__container {
+    top: 1058px;
+  }
 }
 
 @media (max-width: 999px) {
@@ -1036,7 +1010,7 @@ h1, h2, h3, h4, h5, h6 {
 .task_faq_main {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 120px 107px;
+  padding: 0 150px 107px;
 }
 
 @media (max-width: 999px) {
@@ -1079,15 +1053,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .section--qna .qna__header {
   cursor: pointer;
-  border-bottom: 1px solid var(--black);
+  border-bottom: 2px solid var(--black);
   background-color: #0000;
   border-radius: 0;
   justify-content: space-between;
   align-items: center;
   gap: 1em;
-  padding: .875rem 1.25rem;
+  padding-right: 45px;
   transition: background-color .2s;
   display: flex;
+  position: relative;
 }
 
 .section--qna .qna__header:hover {
@@ -1098,11 +1073,41 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+.section--qna .qna__header:before {
+  content: " ";
+  height: 40px;
+  width: 40px;
+  background-image: url("faq-box-black.030e0d98.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 0;
+  display: block;
+  position: absolute;
+  bottom: -4px;
+  right: -5px;
+}
+
+.section--qna .qna__header:after {
+  content: " ";
+  height: 40px;
+  width: 40px;
+  background-image: url("faq-box-red.dcc4380f.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-top: 0;
+  display: block;
+  position: absolute;
+  bottom: 4px;
+  right: -17px;
+}
+
 .section--qna .qna__title {
   font-family: MM Text Pro WebTT;
-  font-size: 28px;
-  font-weight: 800;
-  line-height: 30px;
+  font-size: 30.88px;
+  font-weight: bold;
+  line-height: 1.7;
 }
 
 .section--qna .qna__title-icon {
@@ -1113,10 +1118,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .section--qna .qna__content {
   color: var(--red-400);
-  padding: 30px 30px 0;
+  padding: 32px 32px 0 0;
   font-size: 22px;
   font-weight: 400;
-  line-height: 32px;
+  line-height: 1.5em;
 }
 
 .section--qna .qna__content p + p {
@@ -1139,8 +1144,10 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline 2px var(--brand);
 }
 
-.section--qna .qna[open] .qna__title-icon {
-  transform: scaleY(-1);
+.section--qna .qna[open] .qna__header:after {
+  content: " ";
+  background-image: url("faq-box-red-outline.fc78fef0.svg");
+  position: absolute;
 }
 
 .task_love_earth {
@@ -1239,6 +1246,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .task_love_earth .earth_logo_section .content_section {
+  width: 669px;
   z-index: 1;
   flex-direction: column;
   align-items: center;
@@ -1248,9 +1256,19 @@ h1, h2, h3, h4, h5, h6 {
   left: 386px;
 }
 
-@media (max-width: 1199px) {
+@media (max-width: 769px) {
   .task_love_earth .earth_logo_section .content_section {
-    right: 0;
+    width: 100%;
+    top: 320px;
+    left: -5px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1080px) {
+  .task_love_earth .earth_logo_section .content_section {
+    width: 100%;
+    top: 230px;
+    left: -85px;
   }
 }
 
@@ -1265,7 +1283,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 58px;
 }
 
-@media (max-width: 999px) {
+@media (max-width: 769px) {
   .task_love_earth .earth_logo_section .content_section .logo_content {
     width: 100%;
     text-align: center;
@@ -1290,10 +1308,10 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 1080px) {
   .task_love_earth .earth_logo_section .earthBack_shape_img {
-    top: -250px;
-    right: -545.3px;
+    top: -11px;
+    left: -35px;
   }
 }
 
@@ -1302,8 +1320,8 @@ h1, h2, h3, h4, h5, h6 {
   height: 654px;
   z-index: 1;
   position: absolute;
-  top: 95px;
-  left: 0;
+  top: 120px;
+  left: -34px;
 }
 
 .task_love_earth .earth_left_logo .loveEarth_left_logo {
@@ -1312,25 +1330,24 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
 }
 
-@media (min-width: 440px) and (max-width: 768px) {
+@media (max-width: 520px) {
   .task_love_earth .earth_left_logo {
-    width: 694.22px;
-    height: 587px;
-    left: -370px;
+    top: 164px;
+    left: -490px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 999px) {
+@media (min-width: 520px) and (max-width: 699px) {
   .task_love_earth .earth_left_logo {
-    left: -260px;
+    top: 100px;
+    left: -398px;
   }
 }
 
-@media (max-width: 440px) {
+@media (min-width: 699px) and (max-width: 1080px) {
   .task_love_earth .earth_left_logo {
-    width: 656.22px;
-    height: 587px;
-    left: -429px;
+    top: 140px;
+    left: -298px;
   }
 }
 
@@ -1473,15 +1490,15 @@ h1, h2, h3, h4, h5, h6 {
 
           <img src="/btn-right-arrow.aaa782ac.svg" alt="play"></button></a>
     </div>
-    <div class="mobile_img_box">
-      <img src="/mobile.a47b443c.png" class="mobile_img" alt="bg">
-    </div>
-    <!-- <img src="./4/taskPage/doodles.svg" alt="bg-shape" class="white__doodler" /> -->
+    <!-- <div class="mobile_img_box">
+      <img src="./images/taskPage/mobile.png" class="mobile_img" alt="bg" />
+    </div> -->
+    <img src="/img-1.a7379ba1.png" alt="bg-shape" class="white__doodler">
     <img src="/hero-white-bg-s.00c3617c.png" alt="bg-shape" class="white__bg__shape">
     <img src="/user-hero-img.d563efcc.png" alt="bg-shape" class="user">
     <img src="/hero-black-border-s.89de9bf5.png" alt="bg-shape" class="green__bg__shape">
     <img src="/hero-arrow.ac0609cc.png" alt="bg-shape" class="arrow">
-    <img src="/hero-mobil-arrow.260c1063.svg" alt="bg-shape" class="mobile_arrow">
+    <!-- <img src="./images/taskPage/hero-mobil-arrow.svg" alt="bg-shape" class="mobile_arrow" /> -->
     <img src="/orange-bg-s.3036a708.png" alt="bg-shape" class="orange__bg__shape">
     <!-- <img src="./images/taskPage/centergreen.png" alt="bg-shape" class="greencenter__bg__shape" /> -->
     <!-- <img src="./images/taskPage/rightgreen.png" alt="bg-shape" class="greenright__bg__shape" /> -->
@@ -1534,12 +1551,12 @@ h1, h2, h3, h4, h5, h6 {
 
 
       <section class="task__profit">
-  <img src="/profit-bg-img.46e2eda2.svg" alt="bg-shape" class="bg_shape_img">
+  <img src="/profit-bg-img-s.4ba746a8.png" alt="bg-shape" class="bg_shape_img">
 
   <div class="profit_section">
     <img src="/profit-card-imge.050d64ee.png" alt="profit" class="profit_img">
 
-    <img src="/profit-mobile-img.2cf9f835.svg" alt="profit" class="profit_mobile_img">
+    <img src="/profit-card-imge.050d64ee.png" alt="profit" class="profit_mobile_img">
     <div class="profit_contant">
       <h1 class="content_heading">
         Κάθε επιστροφή, <br>
@@ -1596,7 +1613,7 @@ h1, h2, h3, h4, h5, h6 {
   </div> -->
   <div class="earth_logo_section">
     <div class="earth_left_logo">
-      <img class="loveEarth_left_logo" src="/love-earth-arrow-black.c9ce0f6a.png" alt="earth arrow">
+      <img class="loveEarth_left_logo" src="/earth-arrow.4ce2272a.svg" alt="earth arrow">
     </div>
     <div class="content_section">
       <p class="logo_content">
@@ -1610,7 +1627,7 @@ h1, h2, h3, h4, h5, h6 {
           <img src="/btn-right-arrow.aaa782ac.svg" alt="play"></button></a>
     </div>
     <div class="earthBack_shape_img">
-      <img class="earthBack_img" src="/love-earth-s-back-img.a07382a7.png" alt="earth Back">
+      <img class="earthBack_img" src="/love-back-img-s.6a2e59a8.png" alt="earth Back">
     </div>
   </div>
 </div>
@@ -1621,24 +1638,31 @@ h1, h2, h3, h4, h5, h6 {
     <div class="section__content">
       <details class="qna">
         <summary class="qna__header">
-          <h3 class="qna__title">
-            &plus; Τι είναι το πρόγραμμα επιδότησης «Ανακυκλώνω – Αλλάζω συσκευή»;
-          </h3>
-          <img class="qna__title-icon" src="/arrow-down.c0beb1cd.svg" alt="" role="presentation">
+          <h3 class="qna__title">1. Γιατί να επιλέξω SafetyNet;</h3>
         </summary>
         <div class="qna__content">
-          Το πρόγραμμα <strong>«Ανακυκλώνω-Αλλάζω συσκευή»</strong> είναι πρόγραμμα του Υπουργείου
-          Περιβάλλοντος &amp; Ενέργειας, που επιχορηγεί <strong>νοικοκυριά</strong> για την
-          αντικατάσταση παλαιών <strong>κλιματιστικών, ψυγείων και καταψυκτών</strong>, δίνοντας
-          <strong>έως και 50% επιδότηση για την αγορά καινούργιων</strong>
-          ενεργειακά πιο αποδοτικών συσκευών. Οι δικαιούχοι έχουν τη δυνατότητα να αντικαταστήσουν
-          <strong>έως και 3 συσκευές</strong>. Η επιχορήγηση παρέχεται μέσω επιταγών (vouchers).
+          Με το SafetyNet θωρακίζεις τη νέα σου συσκευή με προστασία για 1 χρόνο από σπάσιμο οθόνης
+          & βλάβη από υγρό ή και με επέκταση εγγύησης έως και 5 χρόνια. Επίσης έχεις δωρεάν παραλαβή
+          και επιστροφή στο χώρο σου πανελλαδικά, ενώ για βλάβες που αφορούν τα μηχανικά και
+          ηλεκτρονικά (hardware) μέρη της συσκευής σου, εξασφαλίζεται από εμάς η άρτια επισκευή και
+          λειτουργία της!
         </div>
       </details>
       <details class="qna">
         <summary class="qna__header">
-          <h3 class="qna__title">&plus; Ποια είναι τα οφέλη του προγράμματος;</h3>
-          <img class="qna__title-icon" src="/arrow-down.c0beb1cd.svg" alt="" role="presentation">
+          <h3 class="qna__title">2. Για ποιες συσκευές ισχύει η υπηρεσία;</h3>
+        </summary>
+        <div class="qna__content">
+          <p>
+            Η υπηρεσία SafetyNet ισχύει για Smartphone, TV, Notebook, Tablet, Desktop PC, Monitor,
+            Digital Camera, Gaming Accessories, Printer, Λευκές οικιακές συσκευές, Οικιακές
+            μικροσυσκευές.
+          </p>
+        </div>
+      </details>
+      <details class="qna">
+        <summary class="qna__header">
+          <h3 class="qna__title">Ποια είναι τα οφέλη του προγράμματος;</h3>
         </summary>
         <div class="qna__content">
           <p>
@@ -1652,46 +1676,29 @@ h1, h2, h3, h4, h5, h6 {
       </details>
       <details class="qna">
         <summary class="qna__header">
-          <h3 class="qna__title">&plus; Ποια είναι τα οφέλη του προγράμματος;</h3>
-          <img class="qna__title-icon" src="/arrow-down.c0beb1cd.svg" alt="" role="presentation">
+          <h3 class="qna__title">3. Πόσες φορές μπορώ να επισκευάσω τη συσκευή μου;</h3>
         </summary>
         <div class="qna__content">
           <p>
-            Συμμετέχοντας στο πρόγραμμα μπορείς να αντικαταστήσεις
-            <strong>έως και 3 παλιές και ενεργοβόρες συσκευές</strong> σου και να αποχτήσεις νέες,
-            φιλικές προς το περιβάλλον συσκευές, με <strong>επιδότηση από 30% έως 50%</strong>. Έτσι
-            θα εξοικονομείς ενέργεια και θα έχεις μείωση στην κατανάλωση ρεύματος και άρα
-            εξοικονόμηση χρημάτων!
+            Η υπηρεσία παρέχει απεριόριστες και δωρεάν επισκέψεις για την επισκευή βλάβης που αφορά
+            τα ηλεκτρονικά και μηχανικά μέρη των συσκευών σου. Η προστασία από σπάσιμο οθόνης &
+            βλάβης από πτώση υγρού, καλύπτει μία (1) επισκευή εντός του 1ου έτους από την ημερομηνία
+            αγοράς.
           </p>
         </div>
       </details>
       <details class="qna">
         <summary class="qna__header">
-          <h3 class="qna__title">&plus; Ποια είναι τα οφέλη του προγράμματος;</h3>
-          <img class="qna__title-icon" src="/arrow-down.c0beb1cd.svg" alt="" role="presentation">
+          <h3 class="qna__title">4. Τι γίνεται αφού χαλάσει η συσκευή μου;</h3>
         </summary>
         <div class="qna__content">
           <p>
-            Συμμετέχοντας στο πρόγραμμα μπορείς να αντικαταστήσεις
-            <strong>έως και 3 παλιές και ενεργοβόρες συσκευές</strong> σου και να αποχτήσεις νέες,
-            φιλικές προς το περιβάλλον συσκευές, με <strong>επιδότηση από 30% έως 50%</strong>. Έτσι
-            θα εξοικονομείς ενέργεια και θα έχεις μείωση στην κατανάλωση ρεύματος και άρα
-            εξοικονόμηση χρημάτων!
-          </p>
-        </div>
-      </details>
-      <details class="qna">
-        <summary class="qna__header">
-          <h3 class="qna__title">&plus; Ποια είναι τα οφέλη του προγράμματος;</h3>
-          <img class="qna__title-icon" src="/arrow-down.c0beb1cd.svg" alt="" role="presentation">
-        </summary>
-        <div class="qna__content">
-          <p>
-            Συμμετέχοντας στο πρόγραμμα μπορείς να αντικαταστήσεις
-            <strong>έως και 3 παλιές και ενεργοβόρες συσκευές</strong> σου και να αποχτήσεις νέες,
-            φιλικές προς το περιβάλλον συσκευές, με <strong>επιδότηση από 30% έως 50%</strong>. Έτσι
-            θα εξοικονομείς ενέργεια και θα έχεις μείωση στην κατανάλωση ρεύματος και άρα
-            εξοικονόμηση χρημάτων!
+            Παραλαμβάνουμε τη συσκευή σε ένα από τα καταστήματά μας ή επικοινωνείς με το τηλεφωνικό
+            μας κέντρο για δωρεάν παραλαβή της συσκευής μέσω courier ή προγραμματισμό επισκευής στο
+            χώρο σου. Από τη στιγμή που θα παραλάβουμε τη συσκευή για επισκευή, σου παρέχουμε
+            συσκευή αντικατάστασης είτε μέσω courier είτε σε ένα φυσικό κατάστημα μας και η ομάδα
+            των έμπειρων τεχνικών μας μεταφέρει τα απαραίτητα αρχεία σου και το λογισμικό στη
+            συσκευή αυτή, ενώ διασφαλίζει τη διασύνδεση της και με άλλες συσκευές.
           </p>
         </div>
       </details>

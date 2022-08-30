@@ -3,7 +3,7 @@
 .task_faq_main {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 120px 107px;
+  padding: 0 150px 107px;
 
   @media (max-width: 999px) {
     padding: 0;
@@ -43,11 +43,12 @@
       justify-content: space-between;
       gap: 1em;
       cursor: pointer;
-      padding: 0.875rem 1.25rem;
       background-color: transparent;
       border-radius: 0;
       transition: background-color 0.2s ease;
-      border-bottom: 1px solid var(--black);
+      border-bottom: 2px solid var(--black);
+      position: relative;
+      padding-right: 45px;
 
       &:hover {
         background-color: transparent;
@@ -56,12 +57,41 @@
       &::-webkit-details-marker {
         display: none;
       }
+
+      &:before {
+        content: " ";
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        background-image: url("../images/faq-box-black.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin-top: 0;
+        display: block;
+        bottom: -4px;
+        right: -5px;
+      }
+      &:after {
+        content: " ";
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        background-image: url("../images/faq-box-red.svg");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin-top: 0;
+        display: block;
+        right: -17px;
+        bottom: 4px;
+      }
     }
 
     &__title {
-      font-weight: 800;
-      font-size: 28px;
-      line-height: 30px;
+      font-size: 30.88px;
+      font-weight: bold;
+      line-height: 1.7;
       font-family: "MM Text Pro WebTT";
 
       &-icon {
@@ -74,8 +104,8 @@
     &__content {
       font-weight: 400;
       font-size: 22px;
-      line-height: 32px;
-      padding: 30px 30px 0;
+      line-height: 1.5em;
+      padding: 32px 32px 0 0;
       color: var(--red-400);
 
       p + p {
@@ -100,9 +130,12 @@
     }
 
     &[open] {
-      .qna__title {
-        &-icon {
-          transform: scaleY(-1);
+      .qna__header {
+        &:after {
+          content: " ";
+          position: absolute;
+
+          background-image: url("../images/faq-box-red-outline.svg");
         }
       }
     }
