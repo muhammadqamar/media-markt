@@ -8,7 +8,7 @@
     margin: 56px auto;
     padding: 0 24px;
   }
-  @media (min-width: 768px) and (max-width: 1199px) {
+  @media (min-width: 768px) and (max-width: 1299px) {
     padding: 0 50px;
   }
 
@@ -39,29 +39,22 @@
     align-items: center;
     gap: 23px;
 
+    @media (min-width: 999px) and (max-width: 1199px) {
+      padding: 0 30px;
+    }
+
     @media (max-width: 999px) {
       flex-direction: column;
-      gap: 0;
       padding: 24px;
     }
 
     .profit_img {
       width: 549px;
       height: 504px;
-      display: block;
 
-      @media (max-width: 999px) {
-        display: none;
-      }
-    }
-
-    .profit_mobile_img {
-      display: none;
-
-      @media (max-width: 999px) {
-        display: block;
+      @media (max-width: 768px) {
         width: 100%;
-        height: 292.26px;
+        height: auto;
       }
     }
 
@@ -86,6 +79,10 @@
           letter-spacing: 0.01em;
           margin-bottom: 16px;
         }
+        @media (min-width: 999px) and (max-width: 1199px) {
+          font-size: 38px;
+          line-height: 48px;
+        }
       }
 
       .contant_about {
@@ -101,6 +98,9 @@
           line-height: 22px;
           letter-spacing: 0.02em;
           margin-bottom: 32px;
+        }
+        @media (min-width: 999px) and (max-width: 1199px) {
+          margin-bottom: 34px;
         }
       }
 

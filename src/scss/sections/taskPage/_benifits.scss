@@ -11,8 +11,12 @@
   padding: 341px 120px 0;
   position: relative;
   z-index: 11;
+
   @media (min-width: 516px) and (max-width: 999px) {
     padding: 176px 24px 0;
+  }
+  @media (min-width: 999px) and (max-width: 1299px) {
+    padding: 341px 50px 0;
   }
   @media (max-width: 516px) {
     padding: 276px 24px 0;

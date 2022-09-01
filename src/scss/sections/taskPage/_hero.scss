@@ -10,10 +10,6 @@
     border-top-right-radius: 20px;
     height: 900px;
 
-    // @media (max-width: 768px) {
-    //   height: 900px;
-    // }
-
     @media (max-width: 999px) {
       margin: 50px 16px 0px;
     }
@@ -29,7 +25,7 @@
     float: right;
     margin-right: 136px;
     position: relative;
-    z-index: 999;
+    z-index: 3;
 
     @media (max-width: 999px) {
       margin-right: 0;
