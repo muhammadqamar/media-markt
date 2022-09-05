@@ -1,9 +1,25 @@
 @font-face {
-  font-family: "MM Text Pro WebTT";
-  src: url(../fonts/mmtextwebtt-regular.ttf);
+  font-family: "mm-headline ";
+  src: url("../fonts/MMHeadlineProWebTT-Regular.eot");
+  src: url("../fonts/MMHeadlineProWebTT-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MMHeadlineProWebTT-Regular.woff2") format("woff2"),
+    url("../fonts/MMHeadlineProWebTT-Regular.woff") format("woff"),
+    url("../fonts/MMHeadlineProWebTT-Regular.ttf") format("truetype"),
+    url("../fonts/MMHeadlineProWebTT-Regular.svg#MMHeadlineProWebTT-Regular") format("svg");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "MM Headline Pro WebTT";
-  src: url(../fonts/mmheadlinewebtt-regular.ttf);
+  font-family: "mm-text ";
+  src: url("../fonts/MMTextProWebTT-Regular.eot");
+  src: url("../fonts/MMTextProWebTT-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MMTextProWebTT-Regular.woff2") format("woff2"),
+    url("../fonts/MMTextProWebTT-Regular.woff") format("woff"),
+    url("../fonts/MMTextProWebTT-Regular.ttf") format("truetype"),
+    url("../fonts/MMTextProWebTT-Regular.svg#MMTextProWebTT-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
