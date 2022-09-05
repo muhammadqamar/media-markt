@@ -48,8 +48,10 @@
       font-size: 32px;
       line-height: 41px;
       letter-spacing: 0.02em;
-      span {
-        font-weight: 300;
+      font-family: "MM Text Pro WebTT";
+      font-weight: 400;
+      font span {
+        font-weight: 700;
       }
       @media (max-width: 999px) {
         font-size: 16px;
@@ -269,7 +271,7 @@
     }
 
     .holy__white_box_heading {
-      font-style: italic;
+      // font-style: italic;
       font-weight: 800;
       font-size: 48px;
       line-height: 58px;
@@ -294,6 +296,7 @@
     .holy__white_box_about {
       font-size: 20px;
       line-height: 32px;
+      font-family: "MM Text Pro WebTT";
       font-weight: 400;
       max-width: 911px;
       margin: 0 auto;
