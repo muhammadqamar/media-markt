@@ -23,7 +23,7 @@
     padding-top: 128px;
     color: var(--white);
     float: right;
-    margin-right: 136px;
+    margin-right: 20px;
     position: relative;
     z-index: 3;
 
@@ -48,7 +48,6 @@
       font-size: 32px;
       line-height: 41px;
       letter-spacing: 0.02em;
-      font-family: "MM Headline Pro WebTT ";
       font-weight: 400;
       font span {
         font-weight: 700;
@@ -281,7 +280,6 @@
       max-width: 512px;
       margin: 0 auto;
       margin-bottom: 24px;
-      font-family: "mm-headline", sans-serif;
 
       @media (max-width: 999px) {
         font-weight: 400;
@@ -296,7 +294,6 @@
     .holy__white_box_about {
       font-size: 20px;
       line-height: 32px;
-      font-family: "MM Headline Pro WebTT ";
       font-weight: 400;
       max-width: 911px;
       margin: 0 auto;

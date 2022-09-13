@@ -3,7 +3,6 @@
 
 body {
   // font: 400 1rem / 1.5 "MM Text Pro WebTT";
-  font-family: "MM Headline Pro WebTT";
   overflow-x: hidden;
 }
 
@@ -18,8 +17,8 @@ img {
   display: inline;
 }
 
-@for $i from 1 through 6 {
-  h#{$i} {
-    font-family: Comfortaa, sans-serif;
-  }
-}
+// @for $i from 1 through 6 {
+//   h#{$i} {
+//     font-family: Comfortaa, sans-serif;
+//   }
+// }
