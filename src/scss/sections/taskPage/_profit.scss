@@ -1,15 +1,12 @@
 .task__profit {
   max-width: 1440px;
   margin: 88px auto 88px;
-  padding: 0 120px;
+  padding: 0 30px;
   position: relative;
 
   @media (max-width: 768px) {
     margin: 56px auto;
     padding: 0 24px;
-  }
-  @media (min-width: 768px) and (max-width: 1299px) {
-    padding: 0 50px;
   }
 
   .bg_shape_img {
