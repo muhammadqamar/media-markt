@@ -251,6 +251,12 @@ svg, img {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .task__hero .inner__container {
+    height: 770px;
+  }
+}
+
 @media (max-width: 999px) {
   .task__hero .inner__container {
     margin: 50px 16px 0;
@@ -377,8 +383,8 @@ svg, img {
 
 @media (max-width: 768px) {
   .task__hero .white__bg__shape {
-    top: 507px;
-    left: -100px;
+    top: 366px;
+    left: -52px;
   }
 }
 
@@ -398,6 +404,7 @@ svg, img {
 
 .task__hero .green__bg__shape {
   z-index: 1;
+  height: auto;
   display: block;
   position: absolute;
   top: 133px;
@@ -406,13 +413,15 @@ svg, img {
 
 @media (max-width: 768px) {
   .task__hero .green__bg__shape {
+    height: 400px;
     top: 400px;
-    left: -125px;
+    left: -80px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 999px) {
   .task__hero .green__bg__shape {
+    height: auto;
     top: 367px;
     left: -126px;
   }
@@ -420,6 +429,7 @@ svg, img {
 
 @media (min-width: 999px) and (max-width: 1299px) {
   .task__hero .green__bg__shape {
+    height: auto;
     top: 310px;
     left: -177px;
   }
@@ -464,7 +474,6 @@ svg, img {
 
 @media (max-width: 768px) {
   .task__hero .user {
-    height: 500px;
     top: 330px;
   }
 }
@@ -487,7 +496,7 @@ svg, img {
 }
 
 .task__hero .arrow {
-  z-index: 4;
+  z-index: 2;
   display: block;
   position: absolute;
   top: 363px;
@@ -543,6 +552,12 @@ svg, img {
   top: 800px;
   left: 50%;
   transform: translate(-50%);
+}
+
+@media (max-width: 999px) {
+  .task__hero .holy__white__box__container {
+    top: 650px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 999px) {
@@ -637,7 +652,7 @@ svg, img {
 
 @media (max-width: 516px) {
   .task__benifits {
-    padding: 276px 24px 0;
+    padding: 230px 24px 0;
   }
 }
 
@@ -778,7 +793,7 @@ svg, img {
   .task__profit .bg_shape_img {
     width: 380.33px;
     height: 238.49px;
-    top: 460px;
+    top: 390px;
     right: 0;
   }
 }
@@ -892,7 +907,7 @@ svg, img {
 
 @media (max-width: 768px) {
   .task__smartphone {
-    margin: 56px auto;
+    margin: 56px auto 0;
     padding: 0 24px;
   }
 }
@@ -1006,7 +1021,7 @@ svg, img {
 
 @media (max-width: 999px) {
   .task_faq_main {
-    padding: 0;
+    padding: 0 20px;
   }
 }
 
@@ -1249,7 +1264,7 @@ svg, img {
 @media (max-width: 769px) {
   .task_love_earth .earth_logo_section .content_section {
     width: 100%;
-    top: 320px;
+    top: 265px;
     left: -5px;
   }
 }
@@ -1298,13 +1313,20 @@ svg, img {
   object-fit: cover;
 }
 
+@media (max-width: 768px) {
+  .task_love_earth .earth_logo_section .earthBack_shape_img {
+    top: -78px;
+    left: -35px;
+  }
+}
+
 @media (min-width: 1080px) and (max-width: 1150px) {
   .task_love_earth .earth_logo_section .earthBack_shape_img {
     left: 120px;
   }
 }
 
-@media (min-width: 320px) and (max-width: 1080px) {
+@media (min-width: 768px) and (max-width: 1080px) {
   .task_love_earth .earth_logo_section .earthBack_shape_img {
     top: -11px;
     left: -35px;
@@ -1328,7 +1350,7 @@ svg, img {
 
 @media (max-width: 520px) {
   .task_love_earth .earth_left_logo {
-    top: 164px;
+    top: 110px;
     left: -490px;
   }
 }

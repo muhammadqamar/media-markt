@@ -90,7 +90,7 @@
         left: 300px;
       }
       @media (max-width: 769px) {
-        top: 320px;
+        top: 265px;
         left: -5px;
         width: 100%;
       }
@@ -133,16 +133,16 @@
         object-fit: cover;
       }
 
-      // @media (max-width: 768px) {
-      //   top: -250px;
-      //   right: -545.3px;
-      // }
+      @media (max-width: 768px) {
+        top: -78px;
+        left: -35px;
+      }
 
       @media (min-width: 1080px) and (max-width: 1150px) {
         left: 120px;
       }
 
-      @media (min-width: 320px) and (max-width: 1080px) {
+      @media (min-width: 768px) and (max-width: 1080px) {
         top: -11px;
         left: -35px;
       }
@@ -162,7 +162,7 @@
       object-fit: cover;
     }
     @media (max-width: 520px) {
-      top: 164px;
+      top: 110px;
       left: -490px;
     }
 

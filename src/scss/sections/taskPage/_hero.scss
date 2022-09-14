@@ -10,6 +10,10 @@
     border-top-right-radius: 20px;
     height: 900px;
 
+    @media (max-width: 768px) {
+      height: 770px;
+    }
+
     @media (max-width: 999px) {
       margin: 50px 16px 0px;
     }
@@ -127,8 +131,8 @@
     display: block;
 
     @media (max-width: 768px) {
-      top: 507px;
-      left: -100px;
+      top: 366px;
+      left: -52px;
     }
 
     @media (min-width: 768px) and (max-width: 999px) {
@@ -147,19 +151,24 @@
     left: 0;
     z-index: 1;
     display: block;
+    height: auto;
 
     @media (max-width: 768px) {
       top: 400px;
-      left: -125px;
+      // left: -125px;
+      left: -80px;
+      height: 400px;
     }
 
     @media (min-width: 768px) and (max-width: 999px) {
       top: 367px;
       left: -126px;
+      height: auto;
     }
     @media (min-width: 999px) and (max-width: 1299px) {
       top: 310px;
       left: -177px;
+      height: auto;
     }
   }
 
@@ -193,7 +202,7 @@
     height: auto;
     @media (max-width: 768px) {
       top: 330px;
-      height: 500px;
+      // height: 340px;
       // left: -80px;
     }
 
@@ -215,7 +224,7 @@
     position: absolute;
     top: 363px;
     left: 377px;
-    z-index: 4;
+    z-index: 2;
     display: block;
 
     @media (max-width: 999px) {
@@ -268,6 +277,10 @@
     left: 50%;
     transform: translate(-50%);
     padding: 60px 0;
+
+    @media (max-width: 999px) {
+      top: 650px;
+    }
 
     @media (min-width: 768px) and (max-width: 999px) {
       top: 1058px;
